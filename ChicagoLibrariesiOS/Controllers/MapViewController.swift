@@ -83,12 +83,13 @@ extension MapViewController: MKMapViewDelegate {
         
         if let pin = annotation as? LibraryPin {
             let reuseId = "Pin"
-            var pinView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId)
+            var pinView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId) as? MKPinAnnotationView
             if pinView == nil {
                 pinView = MKPinAnnotationView(annotation: pin, reuseIdentifier: reuseId)
-                pinView?.tintColor = #colorLiteral(red: 0.00620989548, green: 0.517801702, blue: 0.8624553084, alpha: 1)
-            } else {
+                pinView?.pinTintColor = #colorLiteral(red: 0.00620989548, green: 0.517801702, blue: 0.8624553084, alpha: 1)
                 pinView?.canShowCallout = true
+            } else {
+                
             }
             
             return pinView
