@@ -42,7 +42,7 @@ libraryKit.getLibraries() { result in
     case let .success(libraries):
         print("libraries - \(libraries)")
     case let .error(error):
-        XCTFail("error - \(error)")
+        print("error - \(error)")
     }
 }
 ```
