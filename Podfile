@@ -19,7 +19,10 @@ end
 
 target 'ChicagoLibrariesiOS' do
     #inherit! :search_paths
+    use_frameworks!
     pod 'ChicagoLibraryKit', :path => '.'
+    pod 'ISHPullUp'
+    pod 'ISHHoverBar'
 end
 
 target 'Watch Extension' do

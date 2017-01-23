@@ -22,8 +22,8 @@
 
 /* Begin PBXBuildFile section */
 		0DEBBF3DDF30CFDB276F2789 /* Pods_ChicagoLibrariesiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4EF4B5E2798A9A8D7B6B18E /* Pods_ChicagoLibrariesiOS.framework */; };
+		61A24CA61E35AC7100DA9D07 /* LibraryPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A24CA51E35AC7100DA9D07 /* LibraryPin.swift */; };
 		61B287DB1E343054003B5DE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B287DA1E343054003B5DE8 /* AppDelegate.swift */; };
-		61B287DD1E343054003B5DE8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B287DC1E343054003B5DE8 /* ViewController.swift */; };
 		61B287E01E343054003B5DE8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61B287DE1E343054003B5DE8 /* Main.storyboard */; };
 		61B287E21E343054003B5DE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61B287E11E343054003B5DE8 /* Assets.xcassets */; };
 		61B287E51E343054003B5DE8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61B287E31E343054003B5DE8 /* LaunchScreen.storyboard */; };
@@ -45,6 +45,19 @@
 		61B2884E1E3431B2003B5DE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61B2884D1E3431B2003B5DE8 /* Assets.xcassets */; };
 		61B288521E3431B2003B5DE8 /* Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 61B288321E3431B2003B5DE8 /* Watch.app */; };
 		61B2885D1E343A3B003B5DE8 /* ChicagoLibraryKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B2885C1E343A3B003B5DE8 /* ChicagoLibraryKit.swift */; };
+		61B288631E344075003B5DE8 /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B288621E344075003B5DE8 /* Library.swift */; };
+		61B288651E344423003B5DE8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B288641E344423003B5DE8 /* MainViewController.swift */; };
+		61B288681E3444C0003B5DE8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B288671E3444C0003B5DE8 /* MapViewController.swift */; };
+		61B2886A1E3444D6003B5DE8 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B288691E3444D6003B5DE8 /* ListViewController.swift */; };
+		61B2886D1E359400003B5DE8 /* ChicagoLibraryKit.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 61B2886B1E359400003B5DE8 /* ChicagoLibraryKit.podspec */; };
+		61B288701E359410003B5DE8 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 61B2886F1E359410003B5DE8 /* README.md */; };
+		61B288761E359615003B5DE8 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B288721E359614003B5DE8 /* LocationManager.swift */; };
+		61B288771E359615003B5DE8 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B288731E359615003B5DE8 /* NetworkManager.swift */; };
+		61B288781E359615003B5DE8 /* LogManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B288741E359615003B5DE8 /* LogManager.swift */; };
+		61B288791E359615003B5DE8 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B288751E359615003B5DE8 /* DatabaseManager.swift */; };
+		61B2887C1E359621003B5DE8 /* Plist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B2887A1E359621003B5DE8 /* Plist.swift */; };
+		61B2887D1E359621003B5DE8 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B2887B1E359621003B5DE8 /* Enums.swift */; };
+		61B2887F1E359663003B5DE8 /* LibraryError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B2887E1E359663003B5DE8 /* LibraryError.swift */; };
 		68FFCF1CAF56E5B14554FDEE /* Pods_Watch_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EDDE8AF9B2EE5C2040F2A82 /* Pods_Watch_Extension.framework */; };
 		94AB24A4884FA3E143F39237 /* Pods_ChicagoLibraryKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BBD234D145159EAE22F0AE7 /* Pods_ChicagoLibraryKitTests.framework */; };
 		A42B5FA368E1952C148E268D /* Pods_ChicagoLibraryKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C74306C1845B8A9F429B9D8A /* Pods_ChicagoLibraryKit.framework */; };
@@ -133,9 +146,9 @@
 		485F2CDD696438B25EC0D1F6 /* Pods-Watch Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Watch Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Watch Extension/Pods-Watch Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		4F734AD8F6C03237AD8EEC37 /* Pods-Today.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Today.release.xcconfig"; path = "Pods/Target Support Files/Pods-Today/Pods-Today.release.xcconfig"; sourceTree = "<group>"; };
 		50B53B7734228BC9D5F85F45 /* Pods-ChicagoLibraryKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChicagoLibraryKitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChicagoLibraryKitTests/Pods-ChicagoLibraryKitTests.debug.xcconfig"; sourceTree = "<group>"; };
+		61A24CA51E35AC7100DA9D07 /* LibraryPin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LibraryPin.swift; path = Views/LibraryPin.swift; sourceTree = "<group>"; };
 		61B287D71E343054003B5DE8 /* ChicagoLibrariesiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChicagoLibrariesiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61B287DA1E343054003B5DE8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		61B287DC1E343054003B5DE8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		61B287DF1E343054003B5DE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		61B287E11E343054003B5DE8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		61B287E41E343054003B5DE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -167,6 +180,19 @@
 		61B2884D1E3431B2003B5DE8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		61B2884F1E3431B2003B5DE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61B2885C1E343A3B003B5DE8 /* ChicagoLibraryKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChicagoLibraryKit.swift; sourceTree = "<group>"; };
+		61B288621E344075003B5DE8 /* Library.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Library.swift; path = Models/Library.swift; sourceTree = "<group>"; };
+		61B288641E344423003B5DE8 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = Controllers/MainViewController.swift; sourceTree = "<group>"; };
+		61B288671E3444C0003B5DE8 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = Controllers/MapViewController.swift; sourceTree = "<group>"; };
+		61B288691E3444D6003B5DE8 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListViewController.swift; path = Controllers/ListViewController.swift; sourceTree = "<group>"; };
+		61B2886B1E359400003B5DE8 /* ChicagoLibraryKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ChicagoLibraryKit.podspec; sourceTree = "<group>"; };
+		61B2886F1E359410003B5DE8 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		61B288721E359614003B5DE8 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		61B288731E359615003B5DE8 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		61B288741E359615003B5DE8 /* LogManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogManager.swift; sourceTree = "<group>"; };
+		61B288751E359615003B5DE8 /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		61B2887A1E359621003B5DE8 /* Plist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plist.swift; sourceTree = "<group>"; };
+		61B2887B1E359621003B5DE8 /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		61B2887E1E359663003B5DE8 /* LibraryError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryError.swift; sourceTree = "<group>"; };
 		811246E9669B38BABAF7ED3E /* Pods-ChicagoLibraryKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChicagoLibraryKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChicagoLibraryKit/Pods-ChicagoLibraryKit.debug.xcconfig"; sourceTree = "<group>"; };
 		9F9869533BCACDFAA87D434A /* Pods-ChicagoLibraryKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChicagoLibraryKitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChicagoLibraryKitTests/Pods-ChicagoLibraryKitTests.release.xcconfig"; sourceTree = "<group>"; };
 		B4EF4B5E2798A9A8D7B6B18E /* Pods_ChicagoLibrariesiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChicagoLibrariesiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -240,6 +266,8 @@
 		61B287CE1E343054003B5DE8 = {
 			isa = PBXGroup;
 			children = (
+				61B2886F1E359410003B5DE8 /* README.md */,
+				61B2886B1E359400003B5DE8 /* ChicagoLibraryKit.podspec */,
 				61B287D91E343054003B5DE8 /* ChicagoLibrariesiOS */,
 				61B287EE1E343054003B5DE8 /* ChicagoLibrariesiOSUITests */,
 				61B288001E34306A003B5DE8 /* ChicagoLibraryKit */,
@@ -270,8 +298,10 @@
 		61B287D91E343054003B5DE8 /* ChicagoLibrariesiOS */ = {
 			isa = PBXGroup;
 			children = (
+				61B288601E343E80003B5DE8 /* Views */,
+				61B2885F1E343E66003B5DE8 /* Protocols */,
+				61B2885E1E343E59003B5DE8 /* Controllers */,
 				61B287DA1E343054003B5DE8 /* AppDelegate.swift */,
-				61B287DC1E343054003B5DE8 /* ViewController.swift */,
 				61B287DE1E343054003B5DE8 /* Main.storyboard */,
 				61B287E11E343054003B5DE8 /* Assets.xcassets */,
 				61B287E31E343054003B5DE8 /* LaunchScreen.storyboard */,
@@ -295,6 +325,11 @@
 				61B288011E34306A003B5DE8 /* ChicagoLibraryKit.h */,
 				61B288021E34306A003B5DE8 /* Info.plist */,
 				61B2885C1E343A3B003B5DE8 /* ChicagoLibraryKit.swift */,
+				61B2887E1E359663003B5DE8 /* LibraryError.swift */,
+				61B2887A1E359621003B5DE8 /* Plist.swift */,
+				61B2887B1E359621003B5DE8 /* Enums.swift */,
+				61B288711E359452003B5DE8 /* Managers */,
+				61B288611E34405D003B5DE8 /* Models */,
 			);
 			path = ChicagoLibraryKit;
 			sourceTree = "<group>";
@@ -361,6 +396,50 @@
 				61B288441E3431B2003B5DE8 /* PushNotificationPayload.apns */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		61B2885E1E343E59003B5DE8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				61B288641E344423003B5DE8 /* MainViewController.swift */,
+				61B288671E3444C0003B5DE8 /* MapViewController.swift */,
+				61B288691E3444D6003B5DE8 /* ListViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		61B2885F1E343E66003B5DE8 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		61B288601E343E80003B5DE8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				61A24CA51E35AC7100DA9D07 /* LibraryPin.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		61B288611E34405D003B5DE8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				61B288621E344075003B5DE8 /* Library.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		61B288711E359452003B5DE8 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				61B288721E359614003B5DE8 /* LocationManager.swift */,
+				61B288731E359615003B5DE8 /* NetworkManager.swift */,
+				61B288741E359615003B5DE8 /* LogManager.swift */,
+				61B288751E359615003B5DE8 /* DatabaseManager.swift */,
+			);
+			name = Managers;
 			sourceTree = "<group>";
 		};
 		FD5566BEF6A36E52158424C7 /* Pods */ = {
@@ -618,6 +697,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61B2886D1E359400003B5DE8 /* ChicagoLibraryKit.podspec in Resources */,
 				61B287E51E343054003B5DE8 /* LaunchScreen.storyboard in Resources */,
 				61B287E21E343054003B5DE8 /* Assets.xcassets in Resources */,
 				61B287E01E343054003B5DE8 /* Main.storyboard in Resources */,
@@ -889,8 +969,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61B287DD1E343054003B5DE8 /* ViewController.swift in Sources */,
 				61B287DB1E343054003B5DE8 /* AppDelegate.swift in Sources */,
+				61B288681E3444C0003B5DE8 /* MapViewController.swift in Sources */,
+				61B288701E359410003B5DE8 /* README.md in Sources */,
+				61B2886A1E3444D6003B5DE8 /* ListViewController.swift in Sources */,
+				61B288651E344423003B5DE8 /* MainViewController.swift in Sources */,
+				61A24CA61E35AC7100DA9D07 /* LibraryPin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -906,7 +990,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61B2887C1E359621003B5DE8 /* Plist.swift in Sources */,
+				61B2887F1E359663003B5DE8 /* LibraryError.swift in Sources */,
+				61B288771E359615003B5DE8 /* NetworkManager.swift in Sources */,
+				61B288781E359615003B5DE8 /* LogManager.swift in Sources */,
+				61B288791E359615003B5DE8 /* DatabaseManager.swift in Sources */,
 				61B2885D1E343A3B003B5DE8 /* ChicagoLibraryKit.swift in Sources */,
+				61B288631E344075003B5DE8 /* Library.swift in Sources */,
+				61B2887D1E359621003B5DE8 /* Enums.swift in Sources */,
+				61B288761E359615003B5DE8 /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

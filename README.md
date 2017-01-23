@@ -36,7 +36,15 @@ Take a look at Demo project or the Playgrounds.
 ## Using ChicagoLibraryKit code
 
 ```swift
-
+let libraryKit = ChicagoLibraryKit()
+libraryKit.getLibraries() { result in
+    switch result {
+    case let .success(libraries):
+        print("libraries - \(libraries)")
+    case let .error(error):
+        XCTFail("error - \(error)")
+    }
+}
 ```
 
 ## Requirements
