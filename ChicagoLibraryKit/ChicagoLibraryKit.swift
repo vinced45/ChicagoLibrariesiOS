@@ -32,12 +32,14 @@ public class ChicagoLibraryKit: NSObject {
 
      - Returns: Array of `Library` Objects
      */
-    public func getLibraries(completion: @escaping LibraryClosure) {
-        if let results = db.query(Library.self) {
-            if results.count > 0 {
-                let libraries: [Library] = results.map { $0 }
-                completion(LibraryResult.success(libraries))
-                return
+    public func getLibraries(_ foceAPICall: Bool = false, completion: @escaping LibraryClosure) {
+        if !foceAPICall {
+            if let results = db.query(Library.self) {
+                if results.count > 0 {
+                    let libraries: [Library] = results.map { $0 }
+                    completion(LibraryResult.success(libraries))
+                    return
+                }
             }
         }
         
@@ -59,6 +61,14 @@ public class ChicagoLibraryKit: NSObject {
                 completion(LibraryResult.error(LibraryError.default()))
             }
         }
+    }
+    
+    public func queryLibraries() -> Results<Library>? {
+        if let results = db.query(Library.self) {
+            return results
+        }
+        
+        return nil
     }
 }
 

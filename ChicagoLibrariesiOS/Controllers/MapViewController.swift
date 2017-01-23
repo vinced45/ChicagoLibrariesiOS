@@ -23,19 +23,12 @@ class MapViewController: UIViewController {
         super.viewDidLoad()
 
         mapView.delegate = self
+        loadLibraries()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
-        let libraryKit = ChicagoLibraryKit()
-        libraryKit.getLibraries() { result in
-            switch result {
-            case let .success(libraries):
-                let pins = self.createPins(libraries)
-                self.listDelegate?.loadLibraries(libraries)
-                self.mapView.addAnnotations(pins)
-                self.mapView.showAnnotations(pins, animated: true)
-            case let .error(error):
-                print("error - \(error)")
-            }
-        }
     }
     
     public func show(library: Library) {
@@ -56,6 +49,21 @@ class MapViewController: UIViewController {
 
 // MARK: - Methods
 extension MapViewController {
+    func loadLibraries() {
+        let libraryKit = ChicagoLibraryKit()
+        libraryKit.getLibraries(true) { result in
+            switch result {
+            case let .success(libraries):
+                let pins = self.createPins(libraries)
+                self.mapView.removeAnnotations(self.mapView.annotations)
+                self.mapView.addAnnotations(pins)
+                self.mapView.showAnnotations(pins, animated: true)
+            case let .error(error):
+                print("error - \(error)")
+            }
+        }
+    }
+    
     func createPins(_ libraries: [Library]) -> [LibraryPin] {
         var pins: [LibraryPin] = []
         for library in libraries {
@@ -98,8 +106,8 @@ extension MapViewController: MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         let pin = view.annotation as? LibraryPin
-        if let library = pin?.library {
-            listDelegate?.scrollTo(library: library)
+        if let name = pin?.title {
+            listDelegate?.scrollTo(name: name)
         }
     }
     
